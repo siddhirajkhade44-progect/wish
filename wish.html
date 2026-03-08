@@ -71,10 +71,14 @@ margin-top:20px;
 </div>
 
 <script>
+var name = new URLSearchParams(window.location.search).get("name");
 
-var name = localStorage.getItem("holiname");
+if(name == null){
+name = "My Friend";
+}
 
-document.getElementById("wish").innerHTML = "Happy Holi " + name + " 🌈";
+document.getElementById("name").innerHTML = name;
+</script>
 
 </script>
 
